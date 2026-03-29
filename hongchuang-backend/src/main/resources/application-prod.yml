@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: ${MYSQL_URL}
+    username: ${MYSQL_USERNAME}
+    password: ${MYSQL_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    redis:
+      host: ${REDIS_HOST}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+      database: ${REDIS_DB:0}
+      timeout: 3000ms
+logging:
+  file:
+    name: /data/logs/hongchuang-platform/app.log
+
+
+hongchuang:
+  bootstrap:
+    admin:
+      enabled: ${BOOTSTRAP_ADMIN_ENABLED:false}
+      username: ${BOOTSTRAP_ADMIN_USERNAME:admin}
+      email: ${BOOTSTRAP_ADMIN_EMAIL:admin@hongchuang.local}
+      password: ${BOOTSTRAP_ADMIN_PASSWORD:ChangeMe123!}
+      nickname: ${BOOTSTRAP_ADMIN_NICKNAME:系统管理员}

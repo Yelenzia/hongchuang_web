@@ -1,0 +1,109 @@
+:root {
+  --hc-bg: #f7f9fc;
+  --hc-surface: #ffffff;
+  --hc-text: #111827;
+  --hc-text-secondary: #6b7280;
+  --hc-border: #e5e7eb;
+  --hc-primary: #12b5cb;
+  --hc-primary-deep: #0f6e8d;
+  --hc-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --hc-radius: 16px;
+  --hc-max-width: 1200px;
+  --mc-grass: linear-gradient(180deg, #4ade80 0%, #166534 100%);
+  --mc-stone: linear-gradient(180deg, #e5e7eb 0%, #94a3b8 100%);
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #app {
+  min-height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: linear-gradient(180deg, #f9fbfd 0%, #f4f7fa 100%);
+  color: var(--hc-text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.hc-container {
+  width: min(var(--hc-max-width), calc(100vw - 32px));
+  margin: 0 auto;
+}
+
+.hc-card {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(229, 231, 235, 0.85);
+  border-radius: var(--hc-radius);
+  box-shadow: var(--hc-shadow);
+  backdrop-filter: blur(10px);
+}
+
+.hc-section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.hc-section-desc {
+  color: var(--hc-text-secondary);
+  line-height: 1.75;
+  margin: 0;
+}
+
+.hc-gradient-text {
+  background: linear-gradient(90deg, #0f172a 0%, #0ea5b7 65%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.page-enter-active, .page-leave-active {
+  transition: opacity .25s ease, transform .25s ease;
+}
+.page-enter-from, .page-leave-to {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.el-button {
+  border-radius: 12px;
+}
+
+.el-input__wrapper,
+.el-textarea__inner,
+.el-card,
+.el-dialog {
+  border-radius: 14px;
+}
+
+.minecraft-card {
+  position: relative;
+}
+.minecraft-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(34,197,94,.05);
+}
+.pixel-chip {
+  border-radius: 10px;
+  box-shadow: 0 4px 0 rgba(15,23,42,.08);
+}

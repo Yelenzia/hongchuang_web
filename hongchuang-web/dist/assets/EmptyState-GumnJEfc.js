@@ -1,0 +1,1 @@
+import{d as a,c,a as e,t as s,m as o,_ as n}from"./index-Bj0FLdMW.js";const _={class:"empty-state"},d={class:"title"},i={class:"desc"},p=a({__name:"EmptyState",props:{title:{},desc:{}},setup(t){return(r,l)=>(o(),c("div",_,[e("div",d,s(t.title),1),e("div",i,s(t.desc),1)]))}}),f=n(p,[["__scopeId","data-v-a7997cea"]]);export{f as E};

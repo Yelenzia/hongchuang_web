@@ -1,0 +1,1 @@
+import{E as s}from"./index-Bj0FLdMW.js";const o=(a,e)=>{const t=new FormData;return t.append("file",e),s.post(a,t,{headers:{"Content-Type":"multipart/form-data"}})},r=a=>o("/uploads/avatar",a),u=a=>o("/uploads/post-file",a),d=a=>o("/uploads/editor-image",a),l=a=>o("/uploads/resource-cover",a);export{d as a,u as b,r as c,l as u};

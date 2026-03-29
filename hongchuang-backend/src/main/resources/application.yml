@@ -1,0 +1,60 @@
+spring:
+  application:
+    name: hongchuang-platform
+  profiles:
+    active: dev
+  jackson:
+    time-zone: Asia/Shanghai
+    default-property-inclusion: non_null
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 5MB
+  mail:
+    host: ${MAIL_HOST:smtp.163.com}
+    port: ${MAIL_PORT:465}
+    username: ${MAIL_USERNAME:19178246890@163.com}
+    password: ${MAIL_PASSWORD:VUwcQvdkXgMd7LL2}
+    protocol: smtp
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          ssl:
+            enable: true
+          starttls:
+            enable: false
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+logging:
+  level:
+    root: INFO
+    com.hongchuang.platform: INFO
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+security:
+  jwt:
+    secret: ${JWT_SECRET:change-this-to-a-very-long-secret-key-at-least-32-bytes}
+    access-token-expire-seconds: 7200
+    refresh-token-expire-seconds: 604800
+
+upload:
+  local-path: ${UPLOAD_LOCAL_PATH:./uploads}
+
+hc:
+  verification:
+    captcha-expire-minutes: ${HC_CAPTCHA_EXPIRE_MINUTES:5}
+    email-code-expire-minutes: ${HC_EMAIL_CODE_EXPIRE_MINUTES:10}

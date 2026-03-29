@@ -1,0 +1,1 @@
+const e="".replace(/\/$/,""),s=r=>{if(!r)return"";if(/^https?:\/\//i.test(r))return r;let t=r.trim();return t.startsWith("/")||(t=`/${t}`),/^\/uploads\/\d{8}\//.test(t)&&(t=t.replace(/^\/uploads\//,"/uploads/avatar/")),t.startsWith("/uploads/")&&e?`${e}${t}`:t};export{s as r};

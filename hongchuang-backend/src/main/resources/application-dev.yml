@@ -1,0 +1,43 @@
+spring:
+  datasource:
+    url: ${MYSQL_URL:jdbc:mysql://127.0.0.1:3306/hongchuang_platform?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false}
+    username: ${MYSQL_USERNAME:hongchuang}
+    password: ${MYSQL_PASSWORD:hc888}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    redis:
+      host: ${REDIS_HOST:127.0.0.1}
+      port: ${REDIS_PORT:6379}
+      database: ${REDIS_DATABASE:0}
+      timeout: 3000ms
+  mail:
+    host: ${MAIL_HOST:}
+    port: ${MAIL_PORT:587}
+    username: ${MAIL_USERNAME:}
+    password: ${MAIL_PASSWORD:}
+    protocol: smtp
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          ssl:
+            enable: ${MAIL_SSL_ENABLE:false}
+          starttls:
+            enable: ${MAIL_STARTTLS_ENABLE:true}
+
+hongchuang:
+  bootstrap:
+    admin:
+      enabled: true
+      username: ${HC_ADMIN_USERNAME:admin}
+      email: ${HC_ADMIN_EMAIL:admin@hongchuang.local}
+      password: ${HC_ADMIN_PASSWORD:Admin@123456}
+      nickname: ${HC_ADMIN_NICKNAME:系统管理员}
+
+upload:
+  local-path: ${UPLOAD_LOCAL_PATH:uploads}
+
+mail:
+  from-name: ${MAIL_FROM_NAME:鸿创工作室邮箱服务}
+  from-email: ${MAIL_FROM_EMAIL:no-reply@hongchuang.local}

@@ -1,0 +1,59 @@
+### 注册
+POST http://localhost:8080/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "username": "demo_user",
+  "email": "demo@example.com",
+  "password": "Demo123456!",
+  "confirmPassword": "Demo123456!"
+}
+
+### 登录
+POST http://localhost:8080/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "account": "demo_user",
+  "password": "Demo123456!"
+}
+
+### 当前用户
+GET http://localhost:8080/api/v1/auth/me
+Authorization: Bearer {{token}}
+
+### 获取板块
+GET http://localhost:8080/api/v1/boards
+
+### 获取热门标签
+GET http://localhost:8080/api/v1/tags/hot
+
+### 发帖
+POST http://localhost:8080/api/v1/posts
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "boardId": 1001,
+  "title": "AI插件平台预告",
+  "summary": "关于 AI 插件平台的一些设想",
+  "contentMd": "# 正文\n这是内容",
+  "tagIds": [2001, 2002]
+}
+
+### 帖子列表
+GET http://localhost:8080/api/v1/posts?pageNo=1&pageSize=10&sort=newest
+
+### 评论
+POST http://localhost:8080/api/v1/posts/{{postId}}/comments
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "parentId": 0,
+  "content": "很期待"
+}
+
+### 管理员看用户
+GET http://localhost:8080/api/v1/admin/users
+Authorization: Bearer {{adminToken}}

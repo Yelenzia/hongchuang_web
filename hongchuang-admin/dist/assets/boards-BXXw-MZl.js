@@ -1,0 +1,1 @@
+import{p as d}from"./index-CcAci-QZ.js";const t=()=>d.get("/admin/boards"),e=a=>d.post("/admin/boards",a),r=(a,o)=>d.put(`/admin/boards/${a}`,o),i=a=>d.delete(`/admin/boards/${a}`);export{e as c,i as d,t as g,r as u};

@@ -1,0 +1,1 @@
+import{E as o,K as t}from"./index-Bj0FLdMW.js";const r=()=>o.get("/boards"),d=t("forum",{state:()=>({boards:[],loadingBoards:!1}),actions:{async loadBoards(a=!1){if(this.boards.length>0&&!a)return this.boards;this.loadingBoards=!0;try{const{data:s}=await r();return this.boards=s,s}finally{this.loadingBoards=!1}}}});export{d as u};

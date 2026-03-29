@@ -1,0 +1,1 @@
+import{E as e}from"./index-Bj0FLdMW.js";const a=t=>e.get("/content-templates",{params:t}),r=t=>e.post("/drafts",t),o=t=>e.get("/drafts",{params:t}),p=t=>e.get(`/drafts/${t}`),f=t=>e.delete(`/drafts/${t}`);export{p as a,o as b,f as d,a as g,r as s};

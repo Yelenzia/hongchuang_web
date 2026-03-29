@@ -1,0 +1,1 @@
+import{p as t}from"./index-CcAci-QZ.js";const n=()=>t.get("/admin/achievements"),a=e=>t.post("/admin/achievements",e),c=(e,s)=>t.put(`/admin/achievements/${e}`,s),m=e=>t.get(`/admin/achievements/users/${e}`),p=(e,s)=>t.post(`/admin/achievements/users/${e}/${s}`);export{p as a,n as b,a as c,m as g,c as u};
